@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- Header -->
+<div class="row valign-wrapper">
+  <div class="col m6">
+    <h4 class="headingListContract left" style="color:#e91e63;"><i class="medium material-icons left"></i>Your
+      Contracts</h4>
+  </div>
+  <div class="col m6">
+    <button class="btn waves-effect waves-light right goToListContract" type="button"><a href="/create"
+        style="color:white">Create a Contract
+        <i class="material-icons right">add</i></a>
+    </button>
+  </div>
+</div>
+
+<!-- Preloader -->
+<div class="progress">
+  <div class="indeterminate"></div>
+</div> 
+
+<!-- List of the Contract -->
+<ul class="collection card">
+
+</ul>
+
+
+<!-- Scripts -->
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/listContract.js')}}"></script>
+{% endblock %}

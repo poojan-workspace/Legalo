@@ -1,0 +1,467 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- Header -->
+<div class="row valign-wrapper">
+    <div class="col m6">
+        <h4 class="headingCreateContract left" style="color:#e91e63"><i class="medium material-icons left"></i>Create a
+            Contract</h4>
+    </div>
+    <div class="col m6">
+        <button class="btn waves-effect waves-light right goToListContract" type="button"><a href="/"
+                style="color:white">All Contracts
+                <i class="material-icons right">import_contacts</i></a>
+        </button>
+    </div>
+</div>
+
+<!-- Preloader -->
+<div class="progress">
+    <div class="indeterminate"></div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width tab-demo">
+            <li class="tab"><a class="active" href="#test1">Service Provider</a></li>
+            <li class="tab"><a href="#test2">Buyer</a></li>
+            <li class="tab"><a href="#test4">Services and Payment</a></li>
+            <li class="tab"><a href="#test6">Special Provisions</a></li>
+            <li class="tab"><a href="#test7">Final Details</a></li>
+        </ul>
+    </div>
+    <div class="card-content">
+        <div id="test1">
+            <h5> Service Provider Information <i class="tiny material-icons tooltipped" data-tooltip="What is a service provider? <br><br>  A service provider is a party or company <br> that offers professional services, such as marketing <br> services, catering services, consulting services,<br>  or advertising services.">info</i> </h5>
+            <br>
+            <p> Who is providing the services?</p>
+            <div class="row valign-wrapper">
+               
+                <div class="col s3">
+                    <div class="input-field">
+                        <input id="sfirst_name" placeholder="Enter First Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s2">
+                    <button class="btn waves-effect waves-light fetchPerson" id="fetchServicePro" type="button"><a
+                        style="color:white">Fetch Info</a>
+                </button>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input id="smiddle_name" placeholder="Enter Middle Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="input-field">
+                        <input id="slast_name" placeholder="Enter Last Name" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <p>What is the service provider's address?</p>
+                <input id="sstreetAddress" placeholder="Enter Street Address" type="text" class="validate">
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>City</p>
+                        <input id="scity" placeholder="Enter City" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>State</p>
+                        <input id="sstate" placeholder="Enter State" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Zip Code</p>
+                        <input id="szipCode" placeholder="Enter zip code" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Country</p>
+                        <input id="scountry" placeholder="Enter Country" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Mobile Number</p>
+                        <input id="smobileNumber" placeholder="Enter mobile number" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Email address</p>
+                        <input id="semail" placeholder="Enter email address" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <button class="btn waves-effect waves-light right buttonToNextTab" id="test2-next" type="button"><a
+                            style="color:white">Next
+                            <i class="material-icons right">chevron_right</i></a>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="test2">
+            <h5>Buyer Information</h5>
+            <br>
+
+            <div class="row">
+                <p> &nbsp &nbsp Who is purchasing the service?</p>
+                <div class="col s4">
+                    <div class="input-field">
+
+                        <input id="bfirst_name" placeholder="Enter First Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input id="bmiddle_name" placeholder="Enter Middle Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input id="blast_name" placeholder="Enter Last Name" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <p>What is the buyer's address?</p>
+                <input id="bstreetAddress" placeholder="Enter Street Address" type="text" class="validate">
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>City</p>
+                        <input id="bcity" placeholder="Enter City" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>State</p>
+                        <input id="bstate" placeholder="Enter State" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Zip Code</p>
+                        <input id="bzipCode" placeholder="Enter zip code" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Country</p>
+                        <input id="bcountry" placeholder="Enter Country" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Mobile Number</p>
+                        <input id="bmobileNumber" placeholder="Enter mobile number" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Email Address</p>
+                        <input id="bemail" placeholder="Enter Email Address" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s12">
+                    <button class="btn waves-effect waves-light right buttonToNextTab" id="test4-next" type="button"><a
+                            style="color:white">Next
+                            <i class="material-icons right">chevron_right</i></a>
+                    </button>
+                    <button class="btn waves-effect waves-light left buttonToPrevTab" id="test1-prev" type="button"><a
+                            style="color:white">Prev
+                            <i class="material-icons right">chevron_left</i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="test4">
+            <h5>Stages of Services</h5>
+            <br>
+            <div class="servicesInputList">
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field">
+                            <p>Stage Name</p>
+                            <input id="stageName" placeholder="Enter stage Name" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <p>Stage Amount</p>
+                            <input id="stageAmount" placeholder="Enter stage amount" type="text" class="validate">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+
+                        <div class="input-field">
+                            <p>Stage Description</p>
+                            <textarea placeholder="Enter Description" id="stageDesp"
+                                class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field">
+                            <p>Start Date</p>
+                            <input id="dateOfStart" class="datepicker" placeholder="Enter start date" type="text"
+                                class="validate">
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <p>End Date</p>
+                            <input id="dateOfCompletion" class="datepicker" placeholder="Enter end date" type="text"
+                                class="validate">
+                        </div>
+                    </div>
+                </div>
+                <ul class="collection stagesInCreateForm"> 
+                    
+                </ul>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s4">
+                    <button class="btn waves-effect waves-light left buttonToPrevTab" id="test2-prev" type="button"><a
+                            style="color:white">Prev
+                            <i class="material-icons right">chevron_left</i></a>
+                    </button>
+
+
+                </div>
+                <div class="col s4 center-align">
+                    <button class="btn waves-effect waves-light addStage" id="test-next" type="button"><a
+                            style="color:white">Add Stage
+                            <i class="material-icons right">add</i></a>
+                    </button>
+                </div>
+                <div class="col s4">
+                    <button class="btn waves-effect waves-light right buttonToNextTab " id="test6-next" type="button"><a
+                            style="color:white">Next
+                            <i class="material-icons right">chevron_right</i></a>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="test6">
+
+            <div class="row">
+
+                <div class="col s8">
+                    <h5>Right to Cancel</h5>
+                    <br>
+                    <p>Does the buyer have a statutory right to cancel the transaction?</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group3" value="Yes" type="radio" checked />
+                            <span style="color: black">Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group3" value="No"type="radio" />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s4 grey-text" align="justify">
+                        <b style="color: rgb(117, 114, 114)">What is the statutory right to cancel?</b><br><br>
+                        Federal and state laws allow buyers a 3-day "cooling off" period for certain sales, namely sales made and solicited at the buyer's home. If the transaction falls under one of these state or federal laws, the seller must disclose to the buyer in the contract of his or her right to cancel the transaction. In addition, the seller must provide 2 copies of a cancellation form.                 </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+
+                <div class="col s12">
+                    <h5>Additional Provisions</h5>
+                    <br>
+                    <p>Do you want to include any additional provisions?</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" value="Yes" checked />
+                            <span style="color: black">Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" name="group1" type="radio" value="No" checked />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                    <br>
+                    <div class="input-field">
+                        <p>Describe additional provisions</p>
+                        <textarea placeholder="Use Complete Sentences" id="additionalProvisions"
+                            class="materialize-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s6">
+                    <button class="btn waves-effect waves-light left buttonToPrevTab" id="test4-prev" type="button"><a
+                            style="color:white">Prev
+                            <i class="material-icons right">chevron_left</i></a>
+                    </button>
+                </div>
+                <div class="col s6">
+                    <button class="btn waves-effect waves-light right buttonToNextTab " id="test7-next" type="button"><a
+                            style="color:white">Next
+                            <i class="material-icons right">chevron_right</i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="test7">
+            <div class="row">
+                <div class="col s8">
+                    <h5>Disputes</h5>
+                    <br>
+                    <p>In the event a dispute arises, how will it be resolved?</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="CourtLitigation" name="disputesRadio" type="radio" checked />
+                            <span style="color: black">Court litigation</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="Arbitration" name="disputesRadio" type="radio" checked />
+                            <span style="color: black">Arbitration</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="Mediation" name="disputesRadio" type="radio" checked />
+                            <span style="color: black">Mediation</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="MediationThenArbitration" name="disputesRadio" type="radio" checked />
+                            <span style="color: black">Mediation then Arbitration</span>
+                        </label>
+                    </p><br>
+                    <h5>Assignment</h5>
+                    <br>
+                    <p>Does either party need written permission to assign its rights to a third party?</p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="No" name="assignmentRadio" type="radio" checked />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="Buyer" name="assignmentRadio" type="radio" checked />
+                            <span style="color: black">Yes, the buyer</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="ServiceProvider" name="assignmentRadio" type="radio" checked />
+                            <span style="color: black">Yes, the service provider</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input class="with-gap" value="Both" name="assignmentRadio" type="radio" checked />
+                            <span style="color: black">Yes, both the buyer and the service provider</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="col s4 grey-text" align="justify">
+                        <b style="color: rgb(117, 114, 114)">What are the different types of dispute resolution?</b><br><br>
+                        <b>Court litigation</b> is when a party files an action or claim in court and each side presents its case or defense
+                         in a trial for a judge or jury to determine a final outcome on the claim. The decision by the judge or jury is final and binding.<br><br>
+                        <b>Arbitration</b> is when an arbitrator, a neutral third party selected by the parties, evaluates the dispute and determines a settlement. The decision by the arbitrator is final and binding.<br><br>
+                        <b>Mediation</b>  is when a mediator, a neutral third party selected by the parties, tries to facilitate a compromise and agreement. The decision by the mediator is nonbinding.<br><br>
+                </div>
+            </div>
+            <br>
+            <!-- <div class="row">
+                <div class="col s12">
+                    
+                </div>
+            </div> -->
+            <br>
+            <h5>Dates Of Contract</h5>
+            <div class="row">
+                <div class="col s6">
+                    <div class="input-field">
+                        <p>Start Date</p>
+                        <input id="dateOfContract" class="datepicker" placeholder="Enter start date" type="text"
+                            class="validate">
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <p>End Date</p>
+                        <input id="dateOfExpiry" class="datepicker" placeholder="Enter end date" type="text"
+                            class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <p>Contract Title</p>
+                <input id="contractTitle" placeholder="Enter Contract Title" type="text" class="validate">
+            </div>
+            <div class="input-field">
+                <p>Contract Description</p>
+                <textarea id="contractDesp" placeholder="Enter Description" type="text" class="materialize-textarea"></textarea>
+            </div>
+            <div class="row valign-wrapper">
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light left buttonToPrevTab" id="test6-prev" type="button"><a
+                                style="color:white">Prev
+                                <i class="material-icons right">chevron_left</i></a>
+                        </button>
+                    </div>
+                    <div class="col s6">
+                            <button class="btn waves-effect waves-light right submitContract" type="button"><a
+                                    style="color:white">Submit
+                                    <i class="material-icons right"></i></a>
+                            </button>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Scripts -->
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/createContract.js')}}"></script>
+
+{% endblock %}

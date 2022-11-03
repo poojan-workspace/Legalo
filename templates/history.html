@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-info">
+    <strong>Info!</strong> {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<div id="modal-history" class="modal">
+    <div class="modal-content">
+        <div class="row valign-wrapper">
+            <div class="col m10">
+                <h4>Getting Data from the Blockchain</h4>
+            </div>
+            <div class="col m2">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-red-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row valign-wrapper">
+    <div class="col m6">
+        <h4 class="headingEmployee left" style="color:#e91e63"><i class="medium material-icons left">history</i>Blockchain History</h4>
+    </div>
+    <div class="col m6">
+        <button class="btn waves-effect waves-light right refreshHistory" type="button">Refresh
+            <i class="material-icons right">refresh</i>
+        </button>
+    </div>
+</div>
+
+<!-- Actual data -->
+<ul class="collapsible popout colHistory">
+</ul>
+<script type = "text/javascript" src = "{{url_for('static', filename='js/main.js')}}" ></script>
+<script src="http://www.datejs.com/build/date.js" type="text/javascript"></script>
+<script type = "text/javascript" src = "{{url_for('static', filename='js/history.js')}}" ></script>
+
+{% endblock %}

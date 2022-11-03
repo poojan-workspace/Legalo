@@ -1,0 +1,317 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- Contract name -->
+<!--  View all Contract Buttons -->
+<div class="row valign-wrapper">
+    <div class="col m6">
+        <h4 class="headingViewContract left" style="color:#e91e63"><i class="medium material-icons left"></i></h4>
+    </div>
+    <div class="col m6">
+        <h4 class="headingBalanceContract right chip"></h4>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-content">
+        <div id="test1">
+            <h5 style="color:#e91e63">Service Provider Information</h5>
+            <br>
+            <p> Who is providing the services?</p>
+            <div class="row valign-wrapper">
+               
+                <div class="col s4">
+                    <div class="input-field">
+                        <input disabled id="sfirst_name" placeholder="Enter First Name" type="text" class="validate">
+                    </div>
+                </div>
+                
+                <div class="col s4">
+                    <div class="input-field">
+                        <input disabled id="smiddle_name" placeholder="Enter Middle Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input disabled id="slast_name" placeholder="Enter Last Name" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <p>What is the service provider's address?</p>
+                <input disabled id="sstreetAddress" placeholder="Enter Street Address" type="text" class="validate">
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>City</p>
+                        <input disabled id="scity" placeholder="Enter City" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>State</p>
+                        <input disabled id="sstate" placeholder="Enter State" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Zip Code</p>
+                        <input disabled id="szipCode" placeholder="Enter zip code" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Country</p>
+                        <input disabled id="scountry" placeholder="Enter Country" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Mobile Number</p>
+                        <input disabled id="smobileNumber" placeholder="Enter mobile number" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Email address</p>
+                        <input disabled id="semail" placeholder="Enter email address" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="test2">
+            <h5 style="color:#e91e63">Buyer Information</h5>
+            <br>
+
+            <div class="row">
+                <p> &nbsp &nbsp Who is purchasing the service?</p>
+                <div class="col s4">
+                    <div class="input-field">
+
+                        <input disabled id="bfirst_name" placeholder="Enter First Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input disabled id="bmiddle_name" placeholder="Enter Middle Name" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <input  disabled id="blast_name" placeholder="Enter Last Name" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <p>What is the buyer's address?</p>
+                <input disabled id="bstreetAddress" placeholder="Enter Street Address" type="text" class="validate">
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>City</p>
+                        <input disabled id="bcity" placeholder="Enter City" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>State</p>
+                        <input disabled id="bstate" placeholder="Enter State" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Zip Code</p>
+                        <input disabled id="bzipCode" placeholder="Enter zip code" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Country</p>
+                        <input disabled id="bcountry" placeholder="Enter Country" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Mobile Number</p>
+                        <input disabled id="bmobileNumber" placeholder="Enter mobile number" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="col s4">
+                    <div class="input-field">
+                        <p>Email Address</p>
+                        <input disabled id="bemail" placeholder="Enter Email Address" type="text" class="validate">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="test4">
+            <h5 style="color:#e91e63">Stages of Services</h5>
+            <br>
+            <div class="servicesInputList">
+                <ul class="collection stagesInViewForm card">
+                </ul>
+            </div>
+        </div>
+
+        <div id="test6">
+
+            <div class="row">
+
+                <div class="col s12">
+                    <h5 style="color:#e91e63">Right to Cancel</h5>
+                    <br>
+                    <p>Does the buyer have a statutory right to cancel the transaction?</p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="RTCYes" name="group3" value="Yes" type="radio" checked />
+                            <span style="color: black">Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="RTCNo" name="group3" value="No" type="radio" />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+
+                <div class="col s12">
+                    <h5 style="color:#e91e63">Additional Provisions</h5>
+                    <br>
+                    <p>Do you want to include any additional provisions?</p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="APYes" name="group1" type="radio" value="Yes" checked />
+                            <span style="color: black">Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="APNo" name="group1" type="radio" value="No" />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                    <br>
+                    <div class="input-field">
+                        <p>Describe additional provisions</p>
+                        <textarea disabled placeholder="Use Complete Sentences" id="additionalProvisions"
+                            class="materialize-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="test7">
+            <div class="row">
+                <div class="col s12">
+                    <h5 style="color:#e91e63">Disputes</h5>
+                    <br>
+                    <p>In the event a dispute arises, how will it be resolved?</p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="DispCourtLitigation" name="disputesRadio" type="radio" checked />
+                            <span style="color: black">Court litigation</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="DispArbitration" name="disputesRadio" type="radio" />
+                            <span style="color: black">Arbitration</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="DispMediation" name="disputesRadio" type="radio" />
+                            <span style="color: black">mediation</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="DispMediationThenArbitration" name="disputesRadio" type="radio" />
+                            <span style="color: black">mediation then arbitration</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col s12">
+                    <h5 style="color:#e91e63">Assignment</h5>
+                    <br>
+                    <p>Does either party need written permission to assign its rights to a third party?</p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="AsNo" name="assignmentRadio" type="radio" checked />
+                            <span style="color: black">No</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="AsBuyer" name="assignmentRadio" type="radio"  />
+                            <span style="color: black">Yes, the buyer</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="AsServiceProvider" name="assignmentRadio" type="radio"  />
+                            <span style="color: black">Yes, the service provider</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input disabled class="with-gap" id="AsBoth" name="assignmentRadio" type="radio"  />
+                            <span style="color: black">Yes, both the buyer and the service provider</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <h5 style="color:#e91e63">Dates Of Contract</h5>
+            <div class="row">
+                <div class="col s6">
+                    <div class="input-field">
+                        <p>Start Date</p>
+                        <input disabled id="dateOfContract" class="datepicker" placeholder="Enter start date" type="text"
+                            class="validate">
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <p>End Date</p>
+                        <input disabled id="dateOfExpiry" class="datepicker" placeholder="Enter end date" type="text"
+                            class="validate">
+                    </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <h5 style="color:#e91e63">Contract Title</h5>
+                <input disabled id="contractTitle" placeholder="Enter Contract Title" type="text" class="validate">
+            </div>
+            <div class="input-field">
+                <h5 style="color:#e91e63">Contract Description</h5>
+                <textarea disabled id="additionalDescription" placeholder="Enter Description" type="text" class="materialize-textarea"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/viewContract.js')}}"></script>
+{% endblock %}
