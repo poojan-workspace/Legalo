@@ -5,9 +5,10 @@ A decentralized business contract application where two parties can generate a p
 
 Built using Flask, JavaScript, NodeJS, Hyperledger Fabric and Composer, HTML, CSS, Docker.
 
-## Use Node v8 while running all the setups. (command: nvm use v8)
+## Steps to install and run this project:
+### Use Node v8 while running all the setups. (command: nvm use v8)
 
-## 1. Install Hyperledger Fabric and Composer components from the official documentation.
+### 1. Install Hyperledger Fabric and Composer components from the official documentation.
 
 `https://hyperledger.github.io/composer/v0.19/installing/installing-prereqs`
 `https://hyperledger.github.io/composer/v0.19/installing/development-tools`
@@ -25,7 +26,7 @@ You would then have to do docker-compose stop the docker-compose start from that
 
 In addition to CORE_CHAINCODE_STARTUPTIMEOUT change above, you MUST ALSO UPDATE the timeout values to match (ie CORE_CHAINCODE_STARTUPTIMEOUT), in the `connection.json` file for the card(s) that performs the composer network start command (eg. PeerAdmin card in $HOME/.composer). You will see 4 timeouts (3 for a Peer and 1 for the Order) in the 'client' section, under the stanza "connection". By default, these are set to `300 seconds` - Increase the value to `1200` for each.
 
-## 2. Download the above .bna file from the 
+### 2. Download the above .bna file from the 
 
 [for mac users you have to manually create an archive file as .bna files after downloading
 The command for that is:
@@ -50,7 +51,7 @@ Step into the BNA folder that you made earlier and type in the following command
 
 Now you have started the composer-rest-server and it can be viewed on `http://localhost:3000/explorer`
 
-## 3. For Google authorized server follow the following steps:
+### 3. For Google authorized server follow the following steps:
 
 Close the above composer-rest-server and step into the same BNA folder as earlier.
 
@@ -60,7 +61,7 @@ Now first we have to install passport-google-oauth2 and export its environment v
 
 `export COMPOSER_PROVIDERS='{ "google": { "provider": "google", "module": "passport-google-oauth2", "clientID": "421970497561-2tkigk9in3vrah0lp0jekvbkm9btbetp.apps.googleusercontent.com", "clientSecret": "0Z3sRSX6-cA9geZg76LmPeGC", "authPath": "/auth/google", "callbackURL": "/auth/google/callback", "scope": "https://www.googleapis.com/auth/plus.login", "successRedirect": "http://localhost:5000/", "failureRedirect": "/" } }'`
 
-## 4. Now we have to start 2 composer-rest-server instances, one for authorized node and other for unauthorized.
+### 4. Now we have to start 2 composer-rest-server instances, one for authorized node and other for unauthorized.
 
 Before starting the rest server make sure that you are in bna file folder , then write command:
 `nvm use v8`
@@ -89,7 +90,7 @@ Then start the other port
 
 Make sure that you check that it is running well (note make use of incognito to avoid errors of access tokens)
 
-## 5. Now git clone the frontend in any folder and run its python file. It should be like,
+### 5. Now git clone the frontend in any folder and run its python file. It should be like,
  
 `python app.py`
 [Head to the URL given: `http://127.0.0.1:5000`]
@@ -97,7 +98,7 @@ Make sure that you check that it is running well (note make use of incognito to 
 
 Make sure that you use incognito to launch the above link.
 
-## Legalo Web Pages:
+### Legalo Web Pages:
 #### 1. Service Provider
 ![image](https://user-images.githubusercontent.com/115387678/199657972-8ea63f9c-b103-4118-a953-3c5d00c21409.png)
 
